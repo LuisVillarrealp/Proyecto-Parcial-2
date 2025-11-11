@@ -1,0 +1,13 @@
+#Creado por Luis, Jonathan, Ariel
+num = int(input("Este es un conversos de decimal a binario de 8 bits. Ingrese un número decimal (0-99): "))
+if 0 <= num <= 99:
+    binario = ""
+    n = num
+    while n > 0:
+        binario = str(n % 2) + binario
+        n //= 2
+
+    binario = binario.zfill(8)
+    print("El número", num, "en binario (8 bits) es:", binario)
+else:
+    print("Este numero no es permitido, ingresa uno de 2 digitos ")
